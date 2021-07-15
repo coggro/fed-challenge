@@ -3,6 +3,7 @@
 *******************************/
 :root {
   --lightgrey: #555;
+  --buttongreen: #4daf7c;
   --mint: #d8eee2;
   --ctagreen: #339366;
 }
@@ -37,6 +38,7 @@ h5 {
 .button {
   background-color: #4daf7c;
   color: white;
+  cursor: pointer;
   border: none;
   border-radius: 0.25rem;
   font-family: 'Lato', Arial, sans-serif;
@@ -45,6 +47,10 @@ h5 {
   padding: 0.75rem 1rem;
   text-transform: uppercase;
   width: 154px;
+}
+
+.button:hover {
+  background-color: #339366;
 }
 
 .container {
@@ -110,6 +116,7 @@ h5 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 100%;
 }
 
 .hero .container .image img {
@@ -120,8 +127,11 @@ h5 {
 .page .cards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[1];
-      grid-template-columns: repeat(1, 1fr);
+  -ms-grid-columns: (400px)[1];
+      grid-template-columns: repeat(1, 400px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 25px 57px;
   padding: 4rem 0 4rem;
 }
@@ -129,9 +139,32 @@ h5 {
 .page .cards .card {
   -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.07);
           box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.07);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.page .cards .card:hover {
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.375);
+          box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.375);
+}
+
+.page .cards .card:hover .logobox {
+  background-color: #eee;
+}
+
+.page .cards .card:hover .logobox img.logo-light {
+  display: none;
+}
+
+.page .cards .card:hover .logobox img.logo-dark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .page .cards .card .logobox {
+  -webkit-transition: all 0.375s ease;
+  transition: all 0.375s ease;
   background-color: #333;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -148,6 +181,20 @@ h5 {
 .page .cards .card .logobox img {
   height: 72px;
   width: 80px;
+}
+
+.page .cards .card .logobox img.logo-light {
+  -webkit-transition: all 0.375s ease;
+  transition: all 0.375s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page .cards .card .logobox img.logo-dark {
+  -webkit-transition: all 0.375s ease;
+  transition: all 0.375s ease;
+  display: none;
 }
 
 .page .cards .card .textbox {

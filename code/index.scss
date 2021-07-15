@@ -3,6 +3,7 @@
 *******************************/
 :root {
   --lightgrey: #555;
+  --buttongreen: #4daf7c;
   --mint: #d8eee2;
   --ctagreen: #339366;
 }
@@ -30,6 +31,7 @@ h5 {
 .button {
   background-color: #4daf7c;
   color: white;
+  cursor: pointer;
   border: none;
   border-radius: 0.25rem;
   font-family: 'Lato', Arial, sans-serif;
@@ -38,6 +40,10 @@ h5 {
   padding: 0.75rem 1rem;
   text-transform: uppercase;
   width: 154px;
+
+  &:hover {
+    background-color: #339366;
+  }
 }
 
 .container {
@@ -85,6 +91,7 @@ h5 {
     .image {
       display: flex;
       justify-content: center;
+      max-width: 100%;
       img {
         height: auto;
         width: auto;
@@ -95,12 +102,29 @@ h5 {
 .page {
   .cards {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 400px);
+    justify-content: center;
     gap: 25px 57px;
     padding: 4rem 0 4rem;
     .card {
       box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.07);
+      transition: all 1s ease;
+      &:hover {
+        box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.375);
+        .logobox {
+          background-color: #eee;
+          img {
+            &.logo-light {
+              display: none;
+            }
+            &.logo-dark {
+              display: flex;
+            }
+          }
+        }
+      }
       .logobox {
+        transition: all 0.375s ease;
         background-color: #333;
         display: flex;
         height: 220px;
@@ -109,6 +133,15 @@ h5 {
         img {
           height: 72px;
           width: 80px;
+
+          &.logo-light {
+            transition: all 0.375s ease;
+            display: flex;
+          }
+          &.logo-dark {
+            transition: all 0.375s ease;
+            display: none;
+          }
         }
       }
       .textbox {
