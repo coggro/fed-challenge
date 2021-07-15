@@ -97,8 +97,7 @@ h5 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 25px 57px;
-    padding: 111px 0 148px;
-
+    padding: 4rem 0 4rem;
     .card {
       box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.07);
       .logobox {
@@ -141,13 +140,14 @@ h5 {
       justify-content: space-around;
       text-align: center;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
+      align-items: center;
       p {
         width: 300px;
         color: var(--lightgrey);
         font-size: 26px;
         font-weight: normal;
-        margin: 0;
+        margin: 0 0 3rem;
         span {
           color: var(--ctagreen);
         }
@@ -196,6 +196,17 @@ h5 {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 67px 57px;
+      padding: 6rem 0 6rem;
+    }
+  }
+  .cta {
+    .container {
+      .textbox {
+        flex-direction: row;
+        p {
+          margin: 0;
+        }
+      }
     }
   }
 }
@@ -232,6 +243,7 @@ h5 {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 75px 57px;
+      padding: 111px 0 148px;
     }
   }
 }
