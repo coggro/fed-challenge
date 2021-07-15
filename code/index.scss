@@ -56,6 +56,7 @@ h5 {
 
   .container {
     display: flex;
+    flex-direction: column;
     .text,
     .image {
       flex: 1;
@@ -66,6 +67,7 @@ h5 {
     }
     .text {
       padding-right: 177px;
+      padding-bottom: 5rem;
 
       h1 {
         font-size: 36px;
@@ -80,13 +82,21 @@ h5 {
         margin-bottom: 26px;
       }
     }
+    .image {
+      display: flex;
+      justify-content: center;
+      img {
+        height: auto;
+        width: auto;
+      }
+    }
   }
 }
 .page {
   .cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 75px 57px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px 57px;
     padding: 111px 0 148px;
 
     .card {
@@ -173,23 +183,66 @@ h5 {
          Responsive
 *******************************/
 
-/* Small Monitor */
-@media only screen and (min-width: 1025px) and (max-width: 1199px) {
+/* I hope you'll forgive me for switching up the responsive paradigm here, */
+/* but I find mobile-first to be much more convenient.
+
+/* Tablet */
+@media only screen and (min-width: 767px) {
   .container {
-    width: 933px;
+    width: 100%;
   }
 }
 
-/* Tablet */
-@media screen and (max-width: 1024px) {
+/* Small Monitor */
+@media screen and (min-width: 768px) {
   .container {
     width: 723px;
   }
+  .hero {
+    .container {
+      .text {
+        padding-right: 1rem;
+      }
+    }
+  }
+  .page {
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 67px 57px;
+    }
+  }
 }
 
-/* Mobile */
-@media only screen and (max-width: 767px) {
+/* Medium Monitor */
+@media only screen and (min-width: 1025px) {
   .container {
-    width: 100%;
+    width: 933px;
+  }
+  .hero {
+    .container {
+      .text {
+        padding-right: 177px;
+      }
+    }
+  }
+}
+
+/* Large Monitor */
+@media only screen and (min-width: 1199px) {
+  .container {
+    width: 1127px;
+  }
+  .hero {
+    .container {
+      flex-direction: row;
+    }
+  }
+  .page {
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 75px 57px;
+    }
   }
 }
