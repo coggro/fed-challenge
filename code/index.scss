@@ -187,23 +187,9 @@ h5 {
 /* but I find mobile-first to be much more convenient.
 
 /* Tablet */
-@media only screen and (min-width: 767px) {
-  .container {
-    width: 100%;
-  }
-}
-
-/* Small Monitor */
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .container {
     width: 723px;
-  }
-  .hero {
-    .container {
-      .text {
-        padding-right: 1rem;
-      }
-    }
   }
   .page {
     .cards {
@@ -214,28 +200,31 @@ h5 {
   }
 }
 
-/* Medium Monitor */
-@media only screen and (min-width: 1025px) {
+/* Small Monitor */
+@media screen and (min-width: 992px) {
   .container {
     width: 933px;
   }
   .hero {
     .container {
       .text {
-        padding-right: 177px;
+        padding-right: 1rem;
       }
     }
   }
 }
 
 /* Large Monitor */
-@media only screen and (min-width: 1199px) {
+@media only screen and (min-width: 1200px) {
   .container {
     width: 1127px;
   }
   .hero {
     .container {
       flex-direction: row;
+      .text {
+        padding-right: 177px;
+      }
     }
   }
   .page {
