@@ -90,6 +90,59 @@ h5 {
   margin-bottom: 26px;
 }
 
+.page .cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 75px 57px;
+  padding-top: 111px;
+}
+
+.page .cards .card {
+  -webkit-box-shadow: 4px 4px 4px 4px #333;
+          box-shadow: 4px 4px 4px 4px #333;
+}
+
+.page .cards .card .logobox {
+  background-color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 220px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page .cards .card .logobox img {
+  height: 72px;
+  width: 80px;
+}
+
+.page .cards .card .textbox {
+  padding: 35px;
+}
+
+.page .cards .card .textbox h3,
+.page .cards .card .textbox p {
+  font-family: 'Lato', Arial, sans-serif;
+}
+
+.page .cards .card .textbox h3 {
+  margin: 0 0 15px 0;
+}
+
+.page .cards .card .textbox p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: lighter;
+  margin: 0;
+}
+
 .footer {
   background-color: #191a1d;
   color: #646464;

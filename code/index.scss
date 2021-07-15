@@ -77,6 +77,43 @@ h5 {
   }
 }
 .page {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 75px 57px;
+    padding-top: 111px;
+
+    .card {
+      box-shadow: 4px 4px 4px 4px #333;
+      .logobox {
+        background-color: #333;
+        display: flex;
+        height: 220px;
+        justify-content: center;
+        align-items: center;
+        img {
+          height: 72px;
+          width: 80px;
+        }
+      }
+      .textbox {
+        padding: 35px;
+        h3,
+        p {
+          font-family: 'Lato', Arial, sans-serif;
+        }
+        h3 {
+          margin: 0 0 15px 0;
+        }
+        p {
+          font-size: 18px;
+          line-height: 24px;
+          font-weight: lighter;
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 
 .footer {
