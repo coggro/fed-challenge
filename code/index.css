@@ -103,8 +103,8 @@ h5 {
 }
 
 .page .cards .card {
-  -webkit-box-shadow: 4px 4px 4px 4px #333;
-          box-shadow: 4px 4px 4px 4px #333;
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.07);
 }
 
 .page .cards .card .logobox {
@@ -175,6 +175,7 @@ h5 {
   color: var(--lightgrey);
   font-size: 26px;
   font-weight: normal;
+  margin: 0;
 }
 
 .cta .container .textbox p span {
