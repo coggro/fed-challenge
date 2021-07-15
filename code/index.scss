@@ -146,6 +146,9 @@ h5 {
     .hillbox {
       display: flex;
       justify-content: center;
+      img {
+        max-width: 100%;
+      }
     }
   }
 }

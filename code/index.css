@@ -196,6 +196,10 @@ h5 {
           justify-content: center;
 }
 
+.cta .container .hillbox img {
+  max-width: 100%;
+}
+
 .footer {
   background-color: #191a1d;
   color: #646464;
