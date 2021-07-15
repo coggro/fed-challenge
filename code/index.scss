@@ -2,7 +2,9 @@
             Global
 *******************************/
 :root {
+  --lightgrey: #555;
   --mint: #d8eee2;
+  --ctagreen: #339366;
 }
 html,
 body {
@@ -68,6 +70,7 @@ h5 {
         margin-bottom: 41px;
       }
       p {
+        color: var(--lightgrey);
         font-size: 19px;
         font-weight: lighter;
         line-height: 32px;
@@ -81,7 +84,7 @@ h5 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 75px 57px;
-    padding-top: 111px;
+    padding: 111px 0 148px;
 
     .card {
       box-shadow: 4px 4px 4px 4px #333;
@@ -106,12 +109,39 @@ h5 {
           margin: 0 0 15px 0;
         }
         p {
+          color: var(--lightgrey);
           font-size: 18px;
           line-height: 24px;
           font-weight: lighter;
           margin: 0;
         }
       }
+    }
+  }
+}
+
+.cta {
+  .container {
+    display: flex;
+    flex-direction: column;
+    .textbox {
+      justify-content: space-around;
+      text-align: center;
+      display: flex;
+      flex-direction: row;
+      p {
+        width: 300px;
+        color: var(--lightgrey);
+        font-size: 26px;
+        font-weight: normal;
+        span {
+          color: var(--ctagreen);
+        }
+      }
+    }
+    .hillbox {
+      display: flex;
+      justify-content: center;
     }
   }
 }
