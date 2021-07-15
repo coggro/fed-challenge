@@ -75,6 +75,11 @@ h5 {
           flex: 1;
 }
 
+.hero .container .logo {
+  position: absolute;
+  top: 3rem;
+}
+
 .hero .container .text {
   padding-right: 177px;
 }
